@@ -1,0 +1,27 @@
+
+<p>
+    <a routerLink="/products/new" class="btn btn-primary">Add new Product</a>
+</p>
+<table class="table">
+     <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr *ngFor="let product of productArray">
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button (click)="editProduct(product)">Edit</button>
+            </td>
+            <td>
+                <button (click)="deleteProduct(product.id)">delete</button>
+            </td>
+        </tr>
+     </tbody>
+</table>
+
